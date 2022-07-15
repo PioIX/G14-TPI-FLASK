@@ -1,3 +1,7 @@
 fuente normal: 400
 fuente bold: 700
+*{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700
+}
 https://fonts.google.com/specimen/Open+Sans

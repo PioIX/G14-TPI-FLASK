@@ -1,4 +1,30 @@
-*{
+/*header-base.html*/
+header{
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+}
+#logo{
+  height:150px;
+  widht:auto;
+}
+
+.botonRegistro{
+  /*forma boton*/
+  padding: 10px 20px;
+  border-radius:5px;
+  /*fuente*/
   font-family: 'Open Sans', sans-serif;
-  font-weight: 700
+  font-size:16px;
+  font-weight: 700;
+}
+
+#botonIniciarSesion{
+  background-color:transparent;
+  border-color: transparent;
+}
+
+#botonRegistrarse{
+  background-color:#E11484;
+  border-color: transparent;
 }

@@ -11,12 +11,15 @@
   <body>
     <header>
       <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/ODSgames.png') }}" id=logo></a>
-      <div id="noRegistrado">
-        <button href="#">Registrarse</button>
-        <button href="#">Iniciar Sesion</button>
-      </div>
-      <div id="registrado" hidden>
-        <a href="#">{{ usuario }}</a><a><img src='img/userTest.png'></a>
+      <div id="registro">
+        <div id="noRegistrado">
+          <button href="#" class="botonRegistro" id="botonIniciarSesion">Iniciar Sesion</button>
+          <button href="#" class="botonRegistro" id="botonRegistrarse">Registrarse</button>
+          
+        </div>
+        <div id="registrado" hidden>
+          <a href="#">{{ usuario }}</a><a><img src='img/userTest.png'></a>
+        </div>
       </div>
     </header>
     
