@@ -3,10 +3,25 @@
   <head>
      <meta charset="utf-8"/>
     <title>ODSgames</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleUno.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/styleUno.css') }}">
   </head>
   <body>
-    <a href="{{ url_for('index') }}"><img src="{{ url_for('Img', filename='ODSgames.png') }}" id=logo></a>
-    <p></p>
+    <header>
+      <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/ODSgames.png') }}" id=logo></a>
+      <div id="noRegistrado">
+        <button href="#">Registrarse</button>
+        <button href="#">Iniciar Sesion</button>
+      </div>
+      <div id="registrado" hidden>
+        <a href="#">{{ usuario }}</a><a><img src='img/userTest.png'></a>
+      </div>
+    </header>
+    
+    <article>
+      {% block contenido %}{% endblock %}
+    </article>
   </body>
 </html>
