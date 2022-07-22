@@ -13,7 +13,7 @@
       <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/ODSgames.png') }}" id=logo></a>
       <div id="registro">
         <div id="noRegistrado" hidden>
-          <button onclick="" class="botonRegistro" id="botonIniciarSesion">Iniciar Sesion</button>
+          <button onclick="iniciarSesion" class="botonRegistro" id="botonIniciarSesion">Iniciar Sesion</button>
           <button onclick="" class="botonRegistro" id="botonRegistrarse">Registrarse</button> 
         </div>
         
@@ -27,7 +27,9 @@
       {% block contenido %}{% endblock %}
     </article>
     <script>
-      
+      function iniciarSesion() {
+        
+      }
     </script>
   </body>
 </html>
