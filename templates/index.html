@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
 {% block contenido %}
-<p>a</p>
+<div id="contenedorIndex">
+  <div id="menuIndex">
+    <a href="#"> < </a>
+    <img src="{{ url_for('static', filename='img/ODS2.png') }}" id="ImagenODSIndex"/>
+    <a href="#"> > </a>
+  </div>
+  <div id="descripcionJuego">
+    <p>Proximamente</p>
+  </div>
+</div>
 {% endblock %}

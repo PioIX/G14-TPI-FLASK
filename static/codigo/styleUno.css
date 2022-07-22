@@ -59,7 +59,19 @@ header{
 }
 
 /*contenido index.html*/
+#contenedorIndex{
+  display:flex;
+  flex-wrap: nowrap;
+}
 
+#menuIndex{
+  display:flex;
+  aling-items:center;
+}
+
+#ImagenODSIndex{
+  height:100px;
+}
 
 /*contenido paginaNoCreada.html*/
 #contenedorDisculpas{
