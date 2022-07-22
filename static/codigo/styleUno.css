@@ -14,6 +14,9 @@ header{
 }
 
 /*no registrado*/
+#noRegistrado{
+  margin-top:20px;
+}
 .botonRegistro{
   /*forma boton*/
   padding: 10px 20px;
@@ -21,15 +24,18 @@ header{
   /*fuente*/
   font-size:16px;
   font-weight: 700;
+  color:black;
+  text-decoration:none;
 }
 
 #botonIniciarSesion{
+  
   background-color:transparent;
   border-color: transparent;
 }
 
 #botonRegistrarse{
-  background-color:#E11484;
+  background-color:#E11485;
   border-color: transparent;
 }
 
@@ -55,16 +61,22 @@ header{
 /*contenido index.html*/
 
 
-/*contenido pagina.html*/
+/*contenido paginaNoCreada.html*/
+#contenedorDisculpas{
+  margin-top:10%;
+}
 .disculpas{
   font-weight: 700;
-  text-aling: center;
+  display:flex;
+  justify-content: center;
+  margin-top:0px;
+  margin-bottom:0px;
 }
 
 #textoUnoPaginaNoCreada{
-  font-size:64px;
+  font-size:50px;
 }
 
 #textoDosPaginaNoCreada{
-  font-size:46px
+  font-size:36px
 }

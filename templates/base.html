@@ -11,25 +11,26 @@
   <body>
     <header>
       <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/ODSgames.png') }}" id=logo></a>
+      
       <div id="registro">
-        <div id="noRegistrado" hidden>
-          <button onclick="iniciarSesion" class="botonRegistro" id="botonIniciarSesion">Iniciar Sesion</button>
-          <button onclick="" class="botonRegistro" id="botonRegistrarse">Registrarse</button> 
+        <div>
+        <div id="noRegistrado">
+          <a href="{{ url_for('paginaNoCreada') }}" class="botonRegistro" id="botonIniciarSesion">Iniciar Sesion</a>
+          <a href="{{ url_for('paginaNoCreada') }}" class="botonRegistro" id="botonRegistrarse">Registrarse</a>
         </div>
-        
+        </div>
+
+        <div hidden>
         <div id="registrado">
           <a href="#" id="nombreUsuarioBase"><!--{{ usuario }}--> @test</a><a href="#"><img src="{{ url_for('static', filename='img/userTest.png') }}" id="fotoUsuarioBase"></a>
         </div>
+        </div>
+        
       </div>
     </header>
     
     <article>
       {% block contenido %}{% endblock %}
     </article>
-    <script>
-      function iniciarSesion() {
-        
-      }
-    </script>
   </body>
 </html>
