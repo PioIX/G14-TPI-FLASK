@@ -1,4 +1,8 @@
-/*header-base.html*/
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*header base.html*/
 header{
   display:flex;
   flex-wrap: nowrap;
@@ -9,12 +13,12 @@ header{
   widht:auto;
 }
 
+/*no registrado*/
 .botonRegistro{
   /*forma boton*/
   padding: 10px 20px;
   border-radius:5px;
   /*fuente*/
-  font-family: 'Open Sans', sans-serif;
   font-size:16px;
   font-weight: 700;
 }
@@ -27,4 +31,40 @@ header{
 #botonRegistrarse{
   background-color:#E11484;
   border-color: transparent;
+}
+
+/*registrado*/
+#registrado{
+  display:flex;
+  align-items:center;
+}
+
+#nombreUsuarioBase{
+  font-size:24px;
+  font-weight: 700;
+  color:black;
+  text-decoration: none;
+  margin-right:30px;
+}
+
+#fotoUsuarioBase{
+  height: 100px;
+  weigth: auto;
+}
+
+/*contenido index.html*/
+
+
+/*contenido pagina.html*/
+.disculpas{
+  font-weight: 700;
+  text-aling: center;
+}
+
+#textoUnoPaginaNoCreada{
+  font-size:64px;
+}
+
+#textoDosPaginaNoCreada{
+  font-size:46px
 }
