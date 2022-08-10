@@ -3,39 +3,61 @@
 <div id="contenedorIndex">
   <div id="menuIndex">
     <button onclick="ODSatras()" class="botonCambioDeODS"> < </button>
-    <img src="{{ url_for('static', filename='img/ODS2.png') }}" class="ImagenODSIndex" id="2"/>
-    <img src="{{ url_for('static', filename='img/ODS5.png') }}" class="ImagenODSIndex"id="5" hidden/>
-    <img src="{{ url_for('static', filename='img/ODS7.png') }}" class="ImagenODSIndex"id="7" hidden/>
+    <img src="{{ url_for('static', filename='img/ODS2.png') }}" class="ImagenODSIndex" id="2img"/>
+    <img src="{{ url_for('static', filename='img/ODS5.png') }}" class="ImagenODSIndex"id="5img" hidden/>
+    <img src="{{ url_for('static', filename='img/ODS7.png') }}" class="ImagenODSIndex"id="7img" hidden/>
     <button onclick="ODSdelante()" class="botonCambioDeODS"> > </button>
   </div>
   <div id="descripcionJuego">
-    <p>{{ tituloODSDos }}</p>
+    <div id="2txt">
+      <p> {{ tituloODSDos }} </p>
+    </div>
+    <div id="5txt" hidden>
+      <p>{{ tituloODSCinco }} </p>
+    </div>
+    <div id="7txt" hidden>
+      <p> {{ tituloODSSiete }} </p>
+    </div>
   </div>
   <script>
     function ODSatras(){
-      if(document.getElementById("2").hidden==false){
-        document.getElementById("2").hidden = true
-        document.getElementById("7").hidden = false
-        document.getElementById("descripcionJuego").innerHTML = "<p> {{ tituloODSSiete }} </p>"
+      if(document.getElementById("2img").hidden==false){
+        document.getElementById("2img").hidden = true
+        document.getElementById("7img").hidden = false
+        document.getElementById("2txt").hidden = true
+        document.getElementById("7txt").hidden = false
         
-      } else if (document.getElementById("5").hidden==false){
-        document.getElementById("5").hidden = true
-        document.getElementById("2").hidden = false 
-      } else if (document.getElementById("7").hidden==false){
-        document.getElementById("7").hidden = true
-        document.getElementById("5").hidden = false 
+      } else if (document.getElementById("5img").hidden==false){
+        document.getElementById("5img").hidden = true
+        document.getElementById("2img").hidden = false 
+        document.getElementById("5txt").hidden = true
+        document.getElementById("2txt").hidden = false 
+        
+      } else if (document.getElementById("7img").hidden==false){
+        document.getElementById("7img").hidden = true
+        document.getElementById("5img").hidden = false 
+        document.getElementById("7txt").hidden = true
+        document.getElementById("5txt").hidden = false 
       }
     }
     function ODSdelante() {
-      if(document.getElementById("2").hidden==false){
-        document.getElementById("2").hidden = true
-        document.getElementById("5").hidden = false        
-      } else if (document.getElementById("5").hidden==false){
-        document.getElementById("5").hidden = true
-        document.getElementById("7").hidden = false 
-      } else if (document.getElementById("7").hidden==false){
-        document.getElementById("7").hidden = true
-        document.getElementById("2").hidden = false 
+      if(document.getElementById("2img").hidden==false){
+        document.getElementById("2img").hidden = true
+        document.getElementById("5img").hidden = false
+        document.getElementById("2txt").hidden = true
+        document.getElementById("5txt").hidden = false
+        
+      } else if (document.getElementById("5img").hidden==false){
+        document.getElementById("5img").hidden = true
+        document.getElementById("7img").hidden = false 
+        document.getElementById("5txt").hidden = true
+        document.getElementById("7txt").hidden = false 
+        
+      } else if (document.getElementById("7img").hidden==false){
+        document.getElementById("7img").hidden = true
+        document.getElementById("2img").hidden = false 
+        document.getElementById("7txt").hidden = true
+        document.getElementById("2txt").hidden = false 
       }
     }
   </script>
