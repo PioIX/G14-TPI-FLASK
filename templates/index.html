@@ -2,12 +2,42 @@
 {% block contenido %}
 <div id="contenedorIndex">
   <div id="menuIndex">
-    <a href="#"> < </a>
-    <img src="{{ url_for('static', filename='img/ODS2.png') }}" id="ImagenODSIndex"/>
-    <a href="#"> > </a>
+    <button onclick="ODSatras()" class="botonCambioDeODS"> < </button>
+    <img src="{{ url_for('static', filename='img/ODS2.png') }}" class="ImagenODSIndex" id="2"/>
+    <img src="{{ url_for('static', filename='img/ODS5.png') }}" class="ImagenODSIndex"id="5" hidden/>
+    <img src="{{ url_for('static', filename='img/ODS7.png') }}" class="ImagenODSIndex"id="7" hidden/>
+    <button onclick="ODSdelante()" class="botonCambioDeODS"> > </button>
   </div>
   <div id="descripcionJuego">
-    <p>Proximamente</p>
+    <p>{{ tituloODSDos }}</p>
   </div>
+  <script>
+    function ODSatras(){
+      if(document.getElementById("2").hidden==false){
+        document.getElementById("2").hidden = true
+        document.getElementById("7").hidden = false
+        document.getElementById("descripcionJuego").innerHTML = "<p> {{ tituloODSSiete }} </p>"
+        
+      } else if (document.getElementById("5").hidden==false){
+        document.getElementById("5").hidden = true
+        document.getElementById("2").hidden = false 
+      } else if (document.getElementById("7").hidden==false){
+        document.getElementById("7").hidden = true
+        document.getElementById("5").hidden = false 
+      }
+    }
+    function ODSdelante() {
+      if(document.getElementById("2").hidden==false){
+        document.getElementById("2").hidden = true
+        document.getElementById("5").hidden = false        
+      } else if (document.getElementById("5").hidden==false){
+        document.getElementById("5").hidden = true
+        document.getElementById("7").hidden = false 
+      } else if (document.getElementById("7").hidden==false){
+        document.getElementById("7").hidden = true
+        document.getElementById("2").hidden = false 
+      }
+    }
+  </script>
 </div>
 {% endblock %}
