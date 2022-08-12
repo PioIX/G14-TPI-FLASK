@@ -11,18 +11,18 @@
   <div id="descripcionJuego">
     <div id="2txt">
       <p class="titulo"> {{ tituloODSDos }} </p>
-      <br/>
       <p class="comoSeJuega">Como se Juega:</p>
-      <br/>
       <p class="comoSeJuega"> {{comoSeJuegaODSDos}} </p>
-      <br/>
-      <a href="{{ url_for('paginaNoCreada') }}">Jugar</a>
+      <a href="{{ url_for('paginaNoCreada') }}" class="botonJugar">Jugar</a>
     </div>
     <div id="5txt" hidden>
-      <p>{{ tituloODSCinco }} </p>
+      <p class="titulo"> {{ tituloODSCinco }} </p>
+      <p class="comoSeJuega">Como se Juega:</p>
+      <p class="comoSeJuega"> {{comoSeJuegaODSCinco}} </p>
+      <a href="{{ url_for('paginaNoCreada') }}" class="botonJugar">Jugar</a>
     </div>
     <div id="7txt" hidden>
-      <p> {{ tituloODSSiete }} </p>
+      <p class="titulo"> {{ tituloODSSiete }} </p>
     </div>
   </div>
   <script>

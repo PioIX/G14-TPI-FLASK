@@ -15,22 +15,14 @@
       <div id="registro">
         <div>
         <div id="noRegistrado">
-          <a href="{{ url_for('iniciarSesion') }}" class="botonRegistro" id="botonIniciarSesion">Iniciar Sesion</a>
-          <a href="{{ url_for('registrarse') }}" class="botonRegistro" id="botonRegistrarse">Registrarse</a>
+          {% block boton1 %}{% endblock %}
         </div>
-        </div>
-
-        <div hidden>
-        <div id="registrado">
-          <a href="#" id="nombreUsuarioBase"><!--{{ usuario }}--> @test</a><a href="#"><img src="{{ url_for('static', filename='img/userTest.png') }}" id="fotoUsuarioBase"></a>
-        </div>
-        </div>
-        
+        </div>        
       </div>
     </header>
     
     <article>
-      {% block contenido %}{% endblock %}
+      {% block boton2 %}{% endblock %}
     </article>
   </body>
 </html>
