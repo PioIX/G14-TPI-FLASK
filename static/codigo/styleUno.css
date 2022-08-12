@@ -88,10 +88,16 @@ header{
   flex-direction:column;
   justify-content: center;
 }
-#descripcionJuego p{
+
+#descripcionJuego .titulo{
   font-weigth:700;
   font-size:50px;
   text-decoration:bold;
+}
+
+#descripcionJuego .comoSeJuega{
+  font-weigth:700;
+  font-size:42px;
 }
 
 
