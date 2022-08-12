@@ -1,0 +1,23 @@
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+#contenedorDisculpas{
+  margin-top:10%;
+}
+
+.disculpas{
+  font-weight: 700;
+  display:flex;
+  justify-content: center;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+#textoUnoPaginaNoCreada{
+  font-size:50px;
+}
+
+#textoDosPaginaNoCreada{
+  font-size:36px
+}

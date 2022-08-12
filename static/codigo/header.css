@@ -1,0 +1,59 @@
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+header{
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+}
+
+#logo{
+  height:150px;
+  widht:auto;
+}
+
+/*no registrado*/
+#noRegistrado{
+  margin-top:20px;
+}
+
+.botonRegistro{
+  /*forma boton*/
+  padding: 10px 20px;
+  border-radius:5px;
+  /*fuente*/
+  font-size:16px;
+  font-weight: 700;
+  color:black;
+  text-decoration:none;
+}
+
+#botonIniciarSesion{
+  background-color:transparent;
+  border-color: transparent;
+}
+
+#botonRegistrarse{
+  background-color:#E11485;
+  border-color: transparent;
+}
+
+/*registrado*/
+#registrado{
+  display:flex;
+  align-items:center;
+}
+
+#nombreUsuarioBase{
+  font-size:24px;
+  font-weight: 700;
+  color:black;
+  text-decoration: none;
+  margin-right:30px;
+}
+
+#fotoUsuarioBase{
+  height: 100px;
+  weigth: auto;
+}
