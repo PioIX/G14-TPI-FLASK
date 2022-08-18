@@ -23,49 +23,12 @@
     </div>
     <div id="7txt" hidden>
       <p class="titulo"> {{ tituloODSSiete }} </p>
+      <!-- <p class="titulo"> {{ tituloODSSiete }} </p>
+      <p class="comoSeJuega">Como se Juega:</p>
+      <p class="comoSeJuega"> {{ comoSeJuegaODSSiete }} </p>
+      <a href="{{ url_for('paginaNoCreada') }}" class="botonJugar">Jugar</a> -->
     </div>
   </div>
-  <script>
-    function ODSatras(){
-      if(document.getElementById("2img").hidden==false){
-        document.getElementById("2img").hidden = true
-        document.getElementById("7img").hidden = false
-        document.getElementById("2txt").hidden = true
-        document.getElementById("7txt").hidden = false
-        
-      } else if (document.getElementById("5img").hidden==false){
-        document.getElementById("5img").hidden = true
-        document.getElementById("2img").hidden = false 
-        document.getElementById("5txt").hidden = true
-        document.getElementById("2txt").hidden = false 
-        
-      } else if (document.getElementById("7img").hidden==false){
-        document.getElementById("7img").hidden = true
-        document.getElementById("5img").hidden = false 
-        document.getElementById("7txt").hidden = true
-        document.getElementById("5txt").hidden = false 
-      }
-    }
-    function ODSdelante() {
-      if(document.getElementById("2img").hidden==false){
-        document.getElementById("2img").hidden = true
-        document.getElementById("5img").hidden = false
-        document.getElementById("2txt").hidden = true
-        document.getElementById("5txt").hidden = false
-        
-      } else if (document.getElementById("5img").hidden==false){
-        document.getElementById("5img").hidden = true
-        document.getElementById("7img").hidden = false 
-        document.getElementById("5txt").hidden = true
-        document.getElementById("7txt").hidden = false 
-        
-      } else if (document.getElementById("7img").hidden==false){
-        document.getElementById("7img").hidden = true
-        document.getElementById("2img").hidden = false 
-        document.getElementById("7txt").hidden = true
-        document.getElementById("2txt").hidden = false 
-      }
-    }
-  </script>
+  <script src="static/codigo/javascript/delanteAtras.js"></script>
 </div>
 {% endblock %}
