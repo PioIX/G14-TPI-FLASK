@@ -28,3 +28,12 @@ def registrarse():
 def paginaNoCreada():
   return render_template('paginaNoCreada.html')
 app.run(host='0.0.0.0', port=81)
+
+@app.route('/advertenia/<ods>')
+def advertencia(ods):
+  ods = int(ods)
+  if ods == 2:
+    juego = "ODS 2 - crucigrama"
+    enlace = "https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2016/10/2_Spanish_Why_it_Matters.pdf"
+    boton = "{{ url_for('paginaNoCreada') }}"
+    return render_template('pantallaBloqueo', tituloJuego=juego, pdf=enlace, url=boton)
