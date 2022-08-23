@@ -12,8 +12,9 @@ def index():
   b = '''SELECT titulo FROM juegos WHERE ods=5'''
   bb = '''SELECT comoSeJuega FROM juegos WHERE ods=5'''
   c = '''SELECT titulo FROM juegos WHERE ods=7'''
+  cc = '''SELECT comoSeJuega FROM juegos WHERE ods=7'''
     
-  return render_template('index.html', tituloODSDos=conn.execute(a).fetchone()[0], comoSeJuegaODSDos=conn.execute(aa).fetchone()[0], tituloODSCinco=conn.execute(b).fetchone()[0], comoSeJuegaODSCinco=conn.execute(bb).fetchone()[0], tituloODSSiete=conn.execute(c).fetchone()[0])
+  return render_template('index.html', tituloODSDos=conn.execute(a).fetchone()[0], comoSeJuegaODSDos=conn.execute(aa).fetchone()[0], tituloODSCinco=conn.execute(b).fetchone()[0], comoSeJuegaODSCinco=conn.execute(bb).fetchone()[0], tituloODSSiete=conn.execute(c).fetchone()[0], comoSeJuegaODSSiete=conn.execute(cc).fetchone()[0])
 
 @app.route('/loginin')
 def iniciarSesion():

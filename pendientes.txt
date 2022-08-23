@@ -1,2 +1,3 @@
-botones indes
+index: boton info
+juegos (los 3)
 https://replit.com/@AgustinaThames/ProyectoInterGrupo7#main.py
