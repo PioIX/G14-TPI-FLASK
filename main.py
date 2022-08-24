@@ -37,3 +37,8 @@ def advertencia(ods):
     enlace = "https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2016/10/2_Spanish_Why_it_Matters.pdf"
     boton = "{{ url_for('paginaNoCreada') }}"
     return render_template('pantallaBloqueo', tituloJuego=juego, pdf=enlace, url=boton)
+  elif ods == 5:
+    juego2 = "ODS - sopa de letras"
+    enlace2 = "https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2016/10/5_Spanish_Why_it_Matters.pdf"
+    boton2 =  "{{ url_for('paginaNoCreada') }}"
+    return render_template('pantallaBloqueo', tituloJuego=juego2, pdf=enlace2, url=boton2)
