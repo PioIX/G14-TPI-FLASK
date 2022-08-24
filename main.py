@@ -31,13 +31,18 @@ def paginaNoCreada():
 @app.route('/advertencia/<int:ods>')
 def advertencia(ods):
   if ods == 2:
-    juego = "ODS 2 - crucigrama"
+    juego = "'ODS 2 - crucigrama'"
     enlace = "https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2016/10/2_Spanish_Why_it_Matters.pdf"
     boton = "/sorry"
 
   elif ods == 5:
-    juego = "ODS 5 - sopa de letras"
+    juego = "'ODS 5 - verdadero o falso'"
     enlace = "https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2016/10/5_Spanish_Why_it_Matters.pdf"
+    boton = "/sorry"  
+
+  else:
+    juego = "'ODS 7 - sopa de letras"
+    enlace = "https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2016/10/7_Spanish_Why_it_Matters.pdf"
     boton = "/sorry"
   
   return render_template('pantallaBloqueo.html', tituloJuego=juego, pdf=enlace, url=boton)
