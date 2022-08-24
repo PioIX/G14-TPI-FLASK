@@ -17,3 +17,8 @@
 #textoPantallaBloqueo{
   font-size:36px;
 }
+
+#botonesPantallaBloqueo{
+  display:flex;
+  justify-content: center;
+}
