@@ -3,12 +3,29 @@
 <div id="tituloJuego">
   <h1>ODS 5 - Verdadero o Falso</h1>
 </div>
-<div class="contenedores">
-  <p class="leyenda">{{leyendaUno}}</p>  
-</div>
-<div class="contenedores">
-  <button class="botonVF" id="botonV">Verdadero</button><button class="botonVF" id="botonF">Falso</button>
+<!--leyendas-->
+<div class="contenedoresVF">
+  <p class="leyendaVF" id="leyendaUnoVF">{{leyendaUno}}</p>
+  
+  <div id="resultadosFinales" hidden>
+    <h1 id="puntajeVF">Tu puntaje es:</h1>
+    <div id="errores" hidden>
+      <h2>tus errores fueron:</h2>
+      <ol id="listadoErroresVF">
+      
+      </ol>
+    </div>
+    <br/>
+    <a href="{{ url_for('index') }}" class="botonVF" id="botonIndex">Inicio</a>
+  </div>
 </div>
 
+<!--respuestas-->
+<p id="respuestaUnoVF" hidden>{{ respuestaUno }}</p>
+<div class="contenedoresVF">
+  <div  id="botonesVF">
+  <button onclick='corroborar("V")' class="botonVF" id="botonV">Verdadero</button><button onclick='corroborar("F")' class="botonVF" id="botonF">Falso</button>
+  </div>
+</div>
 <script src="static/codigo/javascript/verdaderoOFalso.js"></script>
 {% endblock %}

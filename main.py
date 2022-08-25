@@ -45,7 +45,7 @@ def verdaderoOFalso():
   extraerRespuestas = '''SELECT respuesta FROM consignas WHERE ods=5'''
   respuestas = conn.execute(extraerRespuestas).fetchall()
   
-  return render_template('verdaderoOFalso.html', leyendaUno = leyendas[0])
+  return render_template('verdaderoOFalso.html', leyendaUno=leyendas[0], respuestaUno=respuestas[0])
   
 @app.route('/sorry')
 def paginaNoCreada():

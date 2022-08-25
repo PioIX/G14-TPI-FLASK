@@ -7,13 +7,13 @@
   font-size:36px
 }
 
-.contenedores{
+.contenedoresVF{
   display:flex;
   justify-content: center;
   text-align: center;
 }
 
-.leyenda{
+.leyendaVF{
   font-size:30px
 }
 
@@ -37,3 +37,9 @@
   border-color: transparent;
 }
 
+#botonIndex{
+  background-color:#00aed9;
+  border-color: transparent;
+  text-decoration:none;
+  color:black;
+}
