@@ -43,3 +43,8 @@
   text-decoration:none;
   color:black;
 }
+
+#listadoErroresVF li{
+  display:flex;
+  text-aling:left;
+}
