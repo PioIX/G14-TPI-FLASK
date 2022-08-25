@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 {% block contenido %}
 <div id="tituloJuego">
-  <p>ODS 5 - Verdadero o Falso</p>
+  <h1>ODS 5 - Verdadero o Falso</h1>
 </div>
-<div>
-  <p>{{leyendaUno}}</p>
-  
+<div class="contenedores">
+  <p class="leyenda">{{leyendaUno}}</p>  
 </div>
+<div class="contenedores">
+  <button class="botonVF" id="botonV">Verdadero</button><button class="botonVF" id="botonF">Falso</button>
+</div>
+
+<script src="static/codigo/javascript/verdaderoOFalso.js"></script>
 {% endblock %}

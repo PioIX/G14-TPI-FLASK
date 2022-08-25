@@ -38,10 +38,14 @@ def advertencia(ods):
 @app.route('/verdaderoOFalso')
 def verdaderoOFalso():  
   conn = sqlite3.connect('ODSGames.db')
-  leyendas = '''SELECT leyenda FROM consignas WHERE ods=5'''
-  respuestas = '''SELECT respuesta FROM consignas WHERE ods=5'''
 
-  return render_template('verdaderoOFalso.html', leyendaUno = "a")
+  extraerLeyendas = '''SELECT leyenda FROM consignas WHERE ods=5'''
+  leyendas = conn.execute(extraerLeyendas).fetchall()
+
+  extraerRespuestas = '''SELECT respuesta FROM consignas WHERE ods=5'''
+  respuestas = conn.execute(extraerRespuestas).fetchall()
+  
+  return render_template('verdaderoOFalso.html', leyendaUno = leyendas[0])
   
 @app.route('/sorry')
 def paginaNoCreada():
