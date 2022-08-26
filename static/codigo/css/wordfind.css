@@ -7,11 +7,6 @@
 */
 
 
-
-h1 {
-  text-align: center; /* to center #puzzle on small devices */
-}
-
 #main {
   margin: 0 auto;
   max-width: 80rem;

@@ -21,7 +21,7 @@ def advertencia(ods):
   if ods == 2:
     juego = "'ODS 2 - crucigrama'"
     enlace = "https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2016/10/2_Spanish_Why_it_Matters.pdf"
-    boton = "/sorry"
+    boton = "/crucigrama"
 
   elif ods == 5:
     juego = "'ODS 5 - verdadero o falso'"
@@ -51,7 +51,15 @@ def verdaderoOFalso():
 
 @app.route('/sopaDeLetras')
 def sopaDeLetras():
-  return render_template('sopaDeLetras.html')
+  conn = sqlite3.connect('ODSGames.db')
+  extraerPalaras = '''SELECT respuesta FROM consignas WHERE ods=7'''
+  palabras = conn.execute(extraerPalaras).fetchall()
+  ## aunque se consuta a la base por las palabras no pudieron ser agregadas de esa manera devido a como se explica en el html el plugin utilizado para hacer la sopa de letras no reconoce correctamente las palabras
+  return render_template('sopaDeLetras.html', palabraUno=palabras[0][0], palabraDos=palabras[1][0], palabraTres=palabras[2][0], palabraCuatro=palabras[3][0], palabraCinco=palabras[4][0], palabraSeis=palabras[5][0], palabraSiete=palabras[6][0], palabraOcho=palabras[7][0], palabraNueve=palabras[8][0], palabraDiez=palabras[9][0], PalabraOnce=palabras[10][0])
+
+@app.route('/crucigrama')
+def crucigrama():
+  return render_template('crucigrama.html')
 
 @app.route('/sorry')
 def paginaNoCreada():

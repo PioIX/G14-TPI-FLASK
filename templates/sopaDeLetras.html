@@ -9,7 +9,6 @@
     <ul id="words">
       <li><button id="add-word" hidden>Añadir palabra</button></li>
     </ul>
-  <!--se oculta devido al poco conocimiento de la herramienta en uso-->
     <div hidden>
     <fieldset id="controls">
       <label for="allowed-missing-words">Allowed missing words :
@@ -38,6 +37,21 @@
     </div>
   </div>
 </div>
+<div id="respuestas">
+  <!--no fuciona deido a que al pasarlas al wordfn.js deuee e valor como [object HTMLParagraphElement] -->
+  <p id="palabraUno" hidden>{{palabraUno}}</p>
+  <p id="palabraDos" hidden>{{palabraDos}}</p>
+  <p id="palabraTres" hidden>{{palabraTres}}</p>
+  <p id="palabraCuatro" hidden>{{palabraCuatro}}</p>
+  <p id="palabraCinco" hidden>{{palabraCinco}}</p>
+  <p id="palabraSeis" hidden>{{palabraSeis}}</p>
+  <p id="palabraSiete" hidden>{{palabraSiete}}</p>
+  <p id="palabraOcho" hidden>{{palabraOcho}}</p>
+  <p id="palabraNueve" hidden>{{palabraNueve}}</p>
+  <p id="palabraDiez" hidden>{{palabraDiez}}</p>
+  <p id="palabraOnce" hidden>{{palabraOnce}}</p>
+</div>
+
 
   <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
   <script type="text/javascript" src="static/codigo/javascript/wordfind.js"></script> 
