@@ -29,9 +29,10 @@ def advertencia(ods):
     boton = "/verdaderoOFalso"  
 
   else:
+    ods == 7
     juego = "'ODS 7 - sopa de letras'"
     enlace = "https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2016/10/7_Spanish_Why_it_Matters.pdf"
-    boton = "/sorry"
+    boton = "/sopaDeLetras"
   
   return render_template('pantallaBloqueo.html', tituloJuego=juego, pdf=enlace, url=boton)
 
@@ -46,7 +47,12 @@ def verdaderoOFalso():
   respuestas = conn.execute(extraerRespuestas).fetchall()
   
   return render_template('verdaderoOFalso.html', leyendaUno=leyendas[0][0], respuestaUno=respuestas[0],leyendaDos=leyendas[1][0], respuestaDos=respuestas[1], leyendaTres=leyendas[2][0], respuestaTres=respuestas[2], leyendaCuatro=leyendas[3][0], respuestaCuatro=respuestas[3], leyendaCinco=leyendas[4][0], respuestaCinco=respuestas[4],leyendaSeis=leyendas[5][0], respuestaSeis=respuestas[5],leyendaSiete=leyendas[6][0], respuestaSiete=respuestas[6])
-  
+
+
+@app.route('/sopaDeLetras')
+def sopaDeLetras():
+  return render_template('sopaDeLetras.html')
+
 @app.route('/sorry')
 def paginaNoCreada():
   return render_template('paginaNoCreada.html') 
