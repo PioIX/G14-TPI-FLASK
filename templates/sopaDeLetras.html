@@ -7,22 +7,24 @@
 <div id="main" role="main">
   <div id="puzzle"></div>
     <ul id="words">
-      <li><button id="add-word" hidden>Add word</button></li>
+      <li><button id="add-word" hidden>Añadir palabra</button></li>
     </ul>
   <!--se oculta devido al poco conocimiento de la herramienta en uso-->
-    <div hidde>
+    <div hidden>
     <fieldset id="controls">
       <label for="allowed-missing-words">Allowed missing words :
-        <input id="allowed-missing-words" type="number" min="0" max="5" step="1" value="2">
+        <input id="allowed-missing-words" type="number" min="0" max="5" step="1" value="0">
       </label>
       <label for="max-grid-growth">Max grid growth :
-        <input id="max-grid-growth" type="number" min="0" max="5" step="1" value="0">
+        <input id="max-grid-growth" type="number" min="5" max="5" step="1" value="5">
       </label>
-      <label for="extra-letters">Extra letters :
+      <label for="extra-letters">letras extra :
         <select id="extra-letters">
+          <!--
           <option value="secret-word" selected>form a secret word</option>
           <option value="none">none, allow blanks</option>
           <option value="secret-word-plus-blanks">form a secret word but allow for extra blanks</option>
+          -->
           <option value="random">random</option>
         </select>
       </label>
@@ -41,8 +43,8 @@
   <script type="text/javascript" src="static/codigo/javascript/wordfindgame.js"></script>
   <script>
     /* Example words setup */
-    ['complice','creative','elegante','farceuse','joviale','motivee','ordonnee','prudente','sexy','tendre'].map(word => WordFindGame.insertWordBefore($('#add-word').parent(), word));
-    $('#secret-word').val('LAETITIA');
+    ['bioenergia','energia','ecosistema','desarrollo','renovables','consumo','carbono','hidroelectrico','contaminaciòn', 'sostenibilidad','sustentabilidad'].map(word => WordFindGame.insertWordBefore($('#add-word').parent(), word));
+    $('#secret-word').val('');
 
     /* Init */
     function recreate() {
