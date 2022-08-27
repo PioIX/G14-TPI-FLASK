@@ -1,5 +1,8 @@
 <!-- sin uso actual -->
 {% extends 'base2.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/inicioRegistrarse.css') }}">
+{% endblock %}
 {% block boton1 %}
 <a href="{{ url_for('iniciarSesion') }}" class="botonRegistro" id="botonIniciarSesion">Iniciar Sesion</a>
 {% endblock %}

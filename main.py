@@ -59,7 +59,18 @@ def sopaDeLetras():
 
 @app.route('/crucigrama')
 def crucigrama():
-  return render_template('crucigrama.html')
+  ## generacion de tablero, no funciono pero nos dio el codigo para hacer la tabla
+  ## tablero = ""
+  ## for i in range(26):
+  ##  tablero += "<tr>"
+  ##  for a in range(23):
+  ##    tablero += f'<td><input class="casilla" type="text" maxlength="1" id="fila{i+1}C{a+1}"/></td>'
+  ##  tablero += "</tr>"
+  conn = sqlite3.connect('ODSGames.db')
+
+  extraerLeyendas = '''SELECT leyenda FROM consignas WHERE ods=2'''
+  leyendas = conn.execute(extraerLeyendas).fetchall()
+  return render_template('crucigrama.html',leyendaUno=leyendas[0][0], leyendaDos=leyendas[1][0], leyendaTres=leyendas[2][0], leyendaCuatro=leyendas[3][0], leyendaCinco=leyendas[4][0], leyendaSeis=leyendas[5][0], leyendaSiete=leyendas[6][0], leyendaOcho=leyendas[7][0],leyendaNueve=leyendas[8][0])
 
 @app.route('/sorry')
 def paginaNoCreada():

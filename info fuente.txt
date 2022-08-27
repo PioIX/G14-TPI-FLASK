@@ -1,7 +1,21 @@
-fuente normal: 400
-fuente bold: 700
-*{
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700
-}
-https://fonts.google.com/specimen/Open+Sans
+
+
+    <!--
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/paginaNoCreada.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/inicioRegistrarse.css') }}">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/verdaderoOFalso.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/pantallaBloqueo.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/wordfind.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/crucigrama.css') }}">
+    -->
+    
+    
+    <!--nuevo-->
+    
+    
+    
+    
+    <!--fin nuevo-->
+    

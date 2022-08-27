@@ -1,0 +1,48 @@
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.casilla {
+  width: 25px;
+  height: 25px;
+  background-color:#d6d6d6;
+  border-color: transpare;
+}
+
+.columna-md-12 {
+  padding:38%;
+  
+}
+
+.tabla {
+  width: 300px;
+  display:flex;
+}
+
+.tabla tr{
+  display:flex;
+}
+
+.tabla td,
+  th {
+  padding: 0;
+}
+
+#contenidoCrucigrama{
+  display:flex;
+  flex-wrap:nowrap;
+}
+
+#consignas ol li{
+  font-size:20px;
+}
+
+#botones {
+  display:flex;
+  justify-content:center;
+}
+
+#mensaje{
+  display:flex;
+  justify-content:center;
+}

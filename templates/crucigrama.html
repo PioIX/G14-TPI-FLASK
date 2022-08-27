@@ -1,101 +1,273 @@
 {% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/crucigrama.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/verdaderoOFalso.css') }}">
+{% endblock %}
 {% block contenido %}
 <div id="tituloJuego">
-  <h1>ODS 7 - Crucigrama</h1>
+  <h1>ODS 2 - Crucigrama</h1>
+</div>
+<div id=contenidoCrucigrama>
+<div>
+<table class="table">
+  <tr><td><input class="casilla" type="text" maxlength="1" id="fila1C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C5"/></td><td><input class="casilla" type="text" maxlength="1" value="3↓" id="fila1C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila1C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila2C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila2C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila3C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C2" value="4→"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C21" value="8↓"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila3C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila4C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C5" value="2→"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila4C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila5C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila5C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila6C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila6C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila7C1" value="5→"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C19" value="7↓"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila7C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila8C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C2" value="9↓"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila8C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila9C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C12" value="6↓"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila9C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila10C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C12" /></td><td><input class="casilla" type="text" maxlength="1" id="fila10C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila10C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila11C1" value="1→"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila11C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila12C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila12C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila13C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila13C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila14C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila14C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila15C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila15C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila16C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila16C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila17C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila17C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila18C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila18C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila19C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila19C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila20C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila20C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila21C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila21C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila22C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila22C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila23C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila23C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila24C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila24C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila25C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila25C23"/></td></tr><tr><td><input class="casilla" type="text" maxlength="1" id="fila26C1"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C2"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C3"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C4"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C5"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C6"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C7"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C8"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C9"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C10"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C11"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C12"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C13"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C14"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C15"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C16"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C17"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C18"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C19"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C20"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C21"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C22"/></td><td><input class="casilla" type="text" maxlength="1" id="fila26C23"/></td></tr>
+</table>
 </div>
 
-<td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C1" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C2" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C3" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C4" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C5" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C6" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C7" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C8" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C9" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C10" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C11" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C12" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C13" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C14" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C15" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C15" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C16" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C17" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C18" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C19" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C20" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C21" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C22" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C23" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C24" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C25" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C26" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C27" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C28" />
-  </td>
-  <td>
-    <input class="casilla" type="text" maxlength="1" id="fila1C29" />
-  </td>
-  
-  </td>
+<div>
+  <div id="consignas">
+  <ol>
+    <li>{{leyendaUno}}</li>
+    <li>{{leyendaDos}}</li>
+    <li>{{leyendaTres}}</li>
+    <li>{{leyendaCuatro}}</li>
+    <li>{{leyendaCinco}}</li>
+    <li>{{leyendaSeis}}</li>
+    <li>{{leyendaSiete}}</li>
+    <li>{{leyendaOcho}}</li>
+    <li>{{leyendaNueve}}</li>
+  </ol>
+  </div>
+  <div id="botones">
+   <button onClick="verificar()" class="botonVF" id="botonV">Verificar</button>
+   <a href= "{{ url_for('index') }}" class="botonVF" id="botonIndex" hidden>Inicio</a>
+  </div>
+  <div id="mensaje"></div>
+</div>
+</div>
 
 <script>
+  for(fila=1; fila<=26; fila++){
+    for(columna=1;columna<=23;columna++){
+      document.getElementById("fila"+fila+"C"+columna).readOnly = true;
+    }
+  }
+
+  var lugarLetras = ['2C6','3C3','3C4','3C5','3C6','3C8','3C9','3C10','3C11','3C12','4C6','4C7', '4C8', '4C9', '4C10', '4C11', '4C12', '4C13', '4C14', '4C15', '4C16', '4C17','4C21','5C6','5C21','6C6','6C21','7C2','7C3','7C4','7C5','7C6','7C7','7C8','7C9','7C10','7C11','7C13','7C14','7C15','7C16','7C17','7C18','7C21','8C19','8C21','9C2','9C6','9C19','9C21','10C2','10C6','10C12','10C19','10C21','11C2','11C3','11C4','11C5','11C6','11C7','11C8','11C9','11C10','11C12','11C13','11C14','11C15','11C16','11C17','11C18','11C19','11C20','11C21','11C22','12C2','12C6','12C12','12C19','12C21','13C2','13C12','13C19','13C21','14C2','14C12','14C19','14C21','15C2','15C12','15C19','16C2','16C19','16C21','17C2','17C19','17C21','18C2','18C21','19C19','19C21','20C2','20C19','20C21','21C2','21C19','21C21','22C2','22C19','22C21','23C2','23C19','23C21','24C2','24C19','24C21','25C2','25C21','26C21']
+
+var lugarEspaciosN = ['3C7','7C12','8C6','11C11','15C21', '18C19', '19C2']
+
+for (i=0; i<lugarLetras.length; i++){
+  document.getElementById("fila"+lugarLetras[i]).readOnly = false;
+  document.getElementById("fila"+lugarLetras[i]).style.backgroundColor="#ffffff";
+  /*subir el 6 q lugar, poner el espacio en blanco 10c12,en 10c21, poner nro 2 y 9 */
+}
+
+for (i=0; i<lugarEspaciosN.length; i++){
+  document.getElementById("fila"+lugarEspaciosN[i]).style.backgroundColor="#000000";
+  
+}
+
+var errorActivo=0;
+  function error(){
+    document.getElementById("mensaje").innerHTML="Hay Palabras incorrectas";
+    document.getElementById("mensaje").style.color="#FF0000";
+    errorActivo=1;
+  }
+  
+  setInterval('ocultarError()',10000);
+
+  function ocultarError(){
+    if(errorActivo==1){
+      document.getElementById("mensaje").innerHTML="";
+      document.getElementById("mensaje").className="";
+      errorActivo=0;
+    }
+  }
+
+  function verificar(){
+    document.getElementById("mensaje").innerHTML="";
+    var palabra1 = document.getElementById("fila"+lugarLetras[56-1]).value + document.getElementById("fila"+lugarLetras[57-1]).value + document.getElementById("fila"+lugarLetras[58-1]).value + document.getElementById("fila"+lugarLetras[59-1]).value + document.getElementById("fila"+lugarLetras[60-1]).value + document.getElementById("fila"+lugarLetras[61-1]).value + document.getElementById("fila"+lugarLetras[62-1]).value + document.getElementById("fila"+lugarLetras[63-1]).value + document.getElementById("fila"+lugarLetras[64-1]).value + document.getElementById("fila"+lugarLetras[65-1]).value + document.getElementById("fila"+lugarLetras[66-1]).value + document.getElementById("fila"+lugarLetras[67-1]).value + document.getElementById("fila"+lugarLetras[68-1]).value + document.getElementById("fila"+lugarLetras[69-1]).value + document.getElementById("fila"+lugarLetras[70-1]).value + document.getElementById("fila"+lugarLetras[71-1]).value +
+document.getElementById("fila"+lugarLetras[72-1]).value + document.getElementById("fila"+lugarLetras[73-1]).value +
+document.getElementById("fila"+lugarLetras[74-1]).value +
+document.getElementById("fila"+lugarLetras[75-1]).value;
+
+  var palabra2 = document.getElementById("fila"+lugarLetras[11-1]).value + document.getElementById("fila"+lugarLetras[12-1]).value + document.getElementById("fila"+lugarLetras[13-1]).value + document.getElementById("fila"+lugarLetras[14-1]).value + document.getElementById("fila"+lugarLetras[15-1]).value + document.getElementById("fila"+lugarLetras[16-1]).value + document.getElementById("fila"+lugarLetras[17-1]).value + document.getElementById("fila"+lugarLetras[18-1]).value + document.getElementById("fila"+lugarLetras[19-1]).value + document.getElementById("fila"+lugarLetras[20-1]).value + document.getElementById("fila"+lugarLetras[21-1]).value + document.getElementById("fila"+lugarLetras[22-1]).value;
+
+  var palabra3 = document.getElementById("fila"+lugarLetras[1-1]).value + document.getElementById("fila"+lugarLetras[5-1]).value + document.getElementById("fila"+lugarLetras[11-1]).value + document.getElementById("fila"+lugarLetras[24-1]).value + document.getElementById("fila"+lugarLetras[26-1]).value + document.getElementById("fila"+lugarLetras[32-1]).value + document.getElementById("fila"+lugarLetras[48-1]).value + document.getElementById("fila"+lugarLetras[52-1]).value + document.getElementById("fila"+lugarLetras[60-1]).value + document.getElementById("fila"+lugarLetras[77-1]).value;
+
+
+var palabra4 = document.getElementById("fila"+lugarLetras[2-1]).value + document.getElementById("fila"+lugarLetras[3-1]).value + document.getElementById("fila"+lugarLetras[4-1]).value + document.getElementById("fila"+lugarLetras[5-1]).value + document.getElementById("fila"+lugarLetras[6-1]).value + document.getElementById("fila"+lugarLetras[7-1]).value + document.getElementById("fila"+lugarLetras[8-1]).value + document.getElementById("fila"+lugarLetras[9-1]).value + document.getElementById("fila"+lugarLetras[10-1]).value; 
+  
+    var palabra5 = document.getElementById("fila"+lugarLetras[28-1]).value + document.getElementById("fila"+lugarLetras[29-1]).value + document.getElementById("fila"+lugarLetras[30-1]).value + document.getElementById("fila"+lugarLetras[31-1]).value + document.getElementById("fila"+lugarLetras[32-1]).value + document.getElementById("fila"+lugarLetras[33-1]).value + document.getElementById("fila"+lugarLetras[34-1]).value + document.getElementById("fila"+lugarLetras[35-1]).value + document.getElementById("fila"+lugarLetras[36-1]).value + document.getElementById("fila"+lugarLetras[37-1]).value + document.getElementById("fila"+lugarLetras[38-1]).value + document.getElementById("fila"+lugarLetras[39-1]).value + document.getElementById("fila"+lugarLetras[40-1]).value + document.getElementById("fila"+lugarLetras[41-1]).value + document.getElementById("fila"+lugarLetras[42-1]).value + document.getElementById("fila"+lugarLetras[43-1]).value;
+
+  var palabra6 = document.getElementById("fila"+lugarLetras[53-1]).value + document.getElementById("fila"+lugarLetras[65-1]).value + document.getElementById("fila"+lugarLetras[78-1]).value + document.getElementById("fila"+lugarLetras[82-1]).value + document.getElementById("fila"+lugarLetras[86-1]).value + document.getElementById("fila"+lugarLetras[90-1]).value;
+
+  var palabra7 = document.getElementById("fila"+lugarLetras[45-1]).value + document.getElementById("fila"+lugarLetras[49-1]).value + document.getElementById("fila"+lugarLetras[54-1]).value + document.getElementById("fila"+lugarLetras[72-1]).value + document.getElementById("fila"+lugarLetras[79-1]).value + document.getElementById("fila"+lugarLetras[83-1]).value + document.getElementById("fila"+lugarLetras[87-1]).value + document.getElementById("fila"+lugarLetras[91-1]).value + document.getElementById("fila"+lugarLetras[93-1]).value + document.getElementById("fila"+lugarLetras[96-1]).value + document.getElementById("fila"+lugarLetras[100-1]).value + document.getElementById("fila"+lugarLetras[103-1]).value + document.getElementById("fila"+lugarLetras[106-1]).value + document.getElementById("fila"+lugarLetras[109-1]).value + document.getElementById("fila"+lugarLetras[112-1]).value + document.getElementById("fila"+lugarLetras[115-1]).value;
+
+  var palabra8 = document.getElementById("fila"+lugarLetras[23-1]).value + document.getElementById("fila"+lugarLetras[25-1]).value + document.getElementById("fila"+lugarLetras[27-1]).value + document.getElementById("fila"+lugarLetras[44-1]).value + document.getElementById("fila"+lugarLetras[46-1]).value + document.getElementById("fila"+lugarLetras[50-1]).value + document.getElementById("fila"+lugarLetras[55-1]).value + document.getElementById("fila"+lugarLetras[74-1]).value + document.getElementById("fila"+lugarLetras[80-1]).value + document.getElementById("fila"+lugarLetras[84-1]).value + document.getElementById("fila"+lugarLetras[88-1]).value + document.getElementById("fila"+lugarLetras[94-1]).value + document.getElementById("fila"+lugarLetras[97-1]).value + document.getElementById("fila"+lugarLetras[99-1]).value + document.getElementById("fila"+lugarLetras[101-1]).value + document.getElementById("fila"+lugarLetras[104-1]).value + document.getElementById("fila"+lugarLetras[107-1]).value + document.getElementById("fila"+lugarLetras[110-1]).value + document.getElementById("fila"+lugarLetras[113-1]).value + document.getElementById("fila"+lugarLetras[116-1]).value + document.getElementById("fila"+lugarLetras[118-1]).value + document.getElementById("fila"+lugarLetras[119-1]).value;  
+
+var palabra9 = document.getElementById("fila"+lugarLetras[47-1]).value + document.getElementById("fila"+lugarLetras[51-1]).value + document.getElementById("fila"+lugarLetras[56-1]).value + document.getElementById("fila"+lugarLetras[76-1]).value + document.getElementById("fila"+lugarLetras[81-1]).value + document.getElementById("fila"+lugarLetras[85-1]).value + document.getElementById("fila"+lugarLetras[89-1]).value + document.getElementById("fila"+lugarLetras[92-1]).value + document.getElementById("fila"+lugarLetras[95-1]).value + document.getElementById("fila"+lugarLetras[98-1]).value + document.getElementById("fila"+lugarLetras[102-1]).value + document.getElementById("fila"+lugarLetras[105-1]).value + document.getElementById("fila"+lugarLetras[108-1]).value + document.getElementById("fila"+lugarLetras[111-1]).value + document.getElementById("fila"+lugarLetras[114-1]).value + document.getElementById("fila"+lugarLetras[117-1]).value;
+
+    if(palabra1.toLowerCase()=="seguridadalimentaria" && palabra2.toLowerCase()=="malnutricion" && palabra3.toLowerCase()=="hambrecero" && palabra4.toLowerCase()=="zonarural" && palabra5.toLowerCase()=="proteccionsocial" && palabra6.toLowerCase()=="hambre" && palabra7.toLowerCase()=="desarrollohumano" && palabra8.toLowerCase()=="desperdicioalimentario" && palabra9.toLowerCase()=="desarrollosocial"){
+      document.getElementById("mensaje").innerHTML="Ganaste";
+      document.getElementById("mensaje").style.fontSize="24px";
+      document.getElementById("mensaje").style.color="#64bf4b";
+      document.getElementById("botonIndex").hidden=false;
+    }else{
+      if(palabra1.toLowerCase()!="seguridadalimentaria"){
+        document.getElementById("fila"+lugarLetras[56-1]).value = "";
+        document.getElementById("fila"+lugarLetras[57-1]).value = "";
+        document.getElementById("fila"+lugarLetras[58-1]).value = ""; 
+        document.getElementById("fila"+lugarLetras[59-1]).value = ""; 
+        document.getElementById("fila"+lugarLetras[60-1]).value = "";
+        document.getElementById("fila"+lugarLetras[61-1]).value = "";
+        document.getElementById("fila"+lugarLetras[62-1]).value = "";
+        document.getElementById("fila"+lugarLetras[63-1]).value = "";
+        document.getElementById("fila"+lugarLetras[64-1]).value = "";
+        document.getElementById("fila"+lugarLetras[65-1]).value = "";
+        document.getElementById("fila"+lugarLetras[66-1]).value = "";
+        document.getElementById("fila"+lugarLetras[67-1]).value = "";
+        document.getElementById("fila"+lugarLetras[68-1]).value = "";
+        document.getElementById("fila"+lugarLetras[69-1]).value = "";
+        document.getElementById("fila"+lugarLetras[70-1]).value = "";
+        document.getElementById("fila"+lugarLetras[71-1]).value = "";
+        document.getElementById("fila"+lugarLetras[72-1]).value = "";
+        document.getElementById("fila"+lugarLetras[73-1]).value = "";
+        document.getElementById("fila"+lugarLetras[74-1]).value = "";
+        document.getElementById("fila"+lugarLetras[75-1]).value = "";
+        error();
+        }
+
+        if(palabra2.toLowerCase()!="malnutricion"){
+          document.getElementById("fila"+lugarLetras[11-1]).value = "";
+          document.getElementById("fila"+lugarLetras[12-1]).value = ""; 
+          document.getElementById("fila"+lugarLetras[13-1]).value = "";
+          document.getElementById("fila"+lugarLetras[14-1]).value = ""; 
+          document.getElementById("fila"+lugarLetras[15-1]).value = "";
+          document.getElementById("fila"+lugarLetras[16-1]).value = "";
+          document.getElementById("fila"+lugarLetras[17-1]).value = "";
+          document.getElementById("fila"+lugarLetras[18-1]).value = "";
+          document.getElementById("fila"+lugarLetras[19-1]).value = "";
+          document.getElementById("fila"+lugarLetras[20-1]).value = "";
+          document.getElementById("fila"+lugarLetras[21-1]).value = "";
+          document.getElementById("fila"+lugarLetras[22-1]).value = "";
+          error();
+        }
+
+        if(palabra3.toLowerCase()!="hambrecero"){
+          document.getElementById("fila"+lugarLetras[1-1]).value = ""; 
+          document.getElementById("fila"+lugarLetras[5-1]).value = ""; 
+          document.getElementById("fila"+lugarLetras[11-1]).value = ""; 
+          document.getElementById("fila"+lugarLetras[24-1]).value = "";
+          document.getElementById("fila"+lugarLetras[26-1]).value = ""; 
+          document.getElementById("fila"+lugarLetras[32-1]).value = "";
+          document.getElementById("fila"+lugarLetras[48-1]).value = "";
+          document.getElementById("fila"+lugarLetras[52-1]).value = "";
+          document.getElementById("fila"+lugarLetras[60-1]).value = "";
+          document.getElementById("fila"+lugarLetras[77-1]).value = "";
+          error();
+        }
+
+        if(palabra4.toLowerCase()!="zonarural"){
+          document.getElementById("fila"+lugarLetras[2-1]).value = "";
+          document.getElementById("fila"+lugarLetras[3-1]).value = "";
+          document.getElementById("fila"+lugarLetras[4-1]).value = "";
+          document.getElementById("fila"+lugarLetras[5-1]).value = "";
+          document.getElementById("fila"+lugarLetras[6-1]).value = "";
+          document.getElementById("fila"+lugarLetras[7-1]).value = "";
+          document.getElementById("fila"+lugarLetras[8-1]).value = "";
+          document.getElementById("fila"+lugarLetras[9-1]).value = "";
+          document.getElementById("fila"+lugarLetras[10-1]).value = "";
+          error();
+        }
+
+        if(palabra5.toLowerCase()!="proteccionsocial"){
+          document.getElementById("fila"+lugarLetras[28-1]).value = "";
+          document.getElementById("fila"+lugarLetras[29-1]).value = "";
+          document.getElementById("fila"+lugarLetras[30-1]).value = "";
+          document.getElementById("fila"+lugarLetras[31-1]).value = "";
+          document.getElementById("fila"+lugarLetras[32-1]).value = "";
+          document.getElementById("fila"+lugarLetras[33-1]).value = "";
+          document.getElementById("fila"+lugarLetras[34-1]).value = "";
+          document.getElementById("fila"+lugarLetras[35-1]).value = "";
+          document.getElementById("fila"+lugarLetras[36-1]).value = "";
+          document.getElementById("fila"+lugarLetras[37-1]).value = "";
+          document.getElementById("fila"+lugarLetras[38-1]).value = "";
+          document.getElementById("fila"+lugarLetras[39-1]).value = "";
+          document.getElementById("fila"+lugarLetras[40-1]).value = "";
+          document.getElementById("fila"+lugarLetras[41-1]).value = "";
+          document.getElementById("fila"+lugarLetras[42-1]).value = "";
+          document.getElementById("fila"+lugarLetras[43-1]).value = "";
+          error()
+        }
+
+        if(palabra6.toLowerCase()!="hambre"){
+        document.getElementById("fila"+lugarLetras[53-1]).value = "";
+        document.getElementById("fila"+lugarLetras[65-1]).value = "";
+        document.getElementById("fila"+lugarLetras[78-1]).value = "";
+        document.getElementById("fila"+lugarLetras[82-1]).value = "";
+        document.getElementById("fila"+lugarLetras[86-1]).value = "";
+        document.getElementById("fila"+lugarLetras[90-1]).value = "";
+        error()
+        }
+
+        if(palabra7.toLowerCase()!="desarrollohumano"){
+          document.getElementById("fila"+lugarLetras[45-1]).value = "";
+          document.getElementById("fila"+lugarLetras[49-1]).value = "";
+          document.getElementById("fila"+lugarLetras[54-1]).value = "";
+          document.getElementById("fila"+lugarLetras[72-1]).value = "";
+          document.getElementById("fila"+lugarLetras[79-1]).value = "";
+          document.getElementById("fila"+lugarLetras[83-1]).value = "";
+          document.getElementById("fila"+lugarLetras[87-1]).value = "";
+          document.getElementById("fila"+lugarLetras[91-1]).value = "";
+          document.getElementById("fila"+lugarLetras[93-1]).value = "";
+          document.getElementById("fila"+lugarLetras[96-1]).value = "";
+          document.getElementById("fila"+lugarLetras[100-1]).value = "";
+          document.getElementById("fila"+lugarLetras[103-1]).value = "";
+          document.getElementById("fila"+lugarLetras[106-1]).value = "";
+          document.getElementById("fila"+lugarLetras[109-1]).value = "";
+          document.getElementById("fila"+lugarLetras[112-1]).value = "";
+          document.getElementById("fila"+lugarLetras[115-1]).value = "";
+          error()
+        }
+
+      if(palabra8.toLowerCase()!="desperdicioalimentario"){
+        document.getElementById("fila"+lugarLetras[23-1]).value = "";
+        document.getElementById("fila"+lugarLetras[25-1]).value = "";
+        document.getElementById("fila"+lugarLetras[27-1]).value = "";
+        document.getElementById("fila"+lugarLetras[44-1]).value = "";
+        document.getElementById("fila"+lugarLetras[46-1]).value = "";
+        document.getElementById("fila"+lugarLetras[50-1]).value = "";
+        document.getElementById("fila"+lugarLetras[55-1]).value = "";
+        document.getElementById("fila"+lugarLetras[74-1]).value = "";
+        document.getElementById("fila"+lugarLetras[80-1]).value = "";
+        document.getElementById("fila"+lugarLetras[84-1]).value = "";
+        document.getElementById("fila"+lugarLetras[88-1]).value = "";
+        document.getElementById("fila"+lugarLetras[94-1]).value = "";
+        document.getElementById("fila"+lugarLetras[97-1]).value = "";
+        document.getElementById("fila"+lugarLetras[99-1]).value = "";
+        document.getElementById("fila"+lugarLetras[101-1]).value = "";
+        document.getElementById("fila"+lugarLetras[104-1]).value = "";
+        document.getElementById("fila"+lugarLetras[107-1]).value = "";
+        document.getElementById("fila"+lugarLetras[110-1]).value = "";
+        document.getElementById("fila"+lugarLetras[113-1]).value = "";
+        document.getElementById("fila"+lugarLetras[116-1]).value = "";
+        document.getElementById("fila"+lugarLetras[118-1]).value = "";
+        document.getElementById("fila"+lugarLetras[119-1]).value = "";
+        error()
+      }
+
+      if(palabra9.toLowerCase()!="desarrollosocial"){
+        document.getElementById("fila"+lugarLetras[47-1]).value = "";
+        document.getElementById("fila"+lugarLetras[51-1]).value = "";
+        document.getElementById("fila"+lugarLetras[56-1]).value = "";
+        document.getElementById("fila"+lugarLetras[76-1]).value = "";
+        document.getElementById("fila"+lugarLetras[81-1]).value = "";
+        document.getElementById("fila"+lugarLetras[85-1]).value = "";
+        document.getElementById("fila"+lugarLetras[89-1]).value = ""; 
+        document.getElementById("fila"+lugarLetras[92-1]).value = "";
+        document.getElementById("fila"+lugarLetras[95-1]).value = "";
+        document.getElementById("fila"+lugarLetras[98-1]).value = "";
+        document.getElementById("fila"+lugarLetras[102-1]).value = "";
+        document.getElementById("fila"+lugarLetras[105-1]).value = "";
+        document.getElementById("fila"+lugarLetras[108-1]).value = "";
+        document.getElementById("fila"+lugarLetras[111-1]).value = "";
+        document.getElementById("fila"+lugarLetras[114-1]).value = "";
+        document.getElementById("fila"+lugarLetras[117-1]).value = "";
+        error()
+      }
+      }
+  }
+</script>
 {% endblock %}

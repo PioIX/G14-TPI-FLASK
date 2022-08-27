@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codigo/css/paginaNoCreada.css') }}">
+{% endblock %}
 {% block contenido %}
 <div id="contenedorDisculpas">
 <h1 class="disculpas" id="textoUnoPaginaNoCreada">Esta parte del sitio aun no esta disponible</h1>
